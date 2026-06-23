@@ -1,0 +1,11 @@
+<svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="markGradientWhite" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#5EEAD4"/>
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" fill="url(#markGradientWhite)"/>
+  <path d="M11 21.5L17.5 28L29.5 14" stroke="#0B1F3A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="52" y="31" font-family="Sora, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF">TechRightly</text>
+</svg>

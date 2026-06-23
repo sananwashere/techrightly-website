@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+.font-heading {
+  letter-spacing: -0.01em;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-md bg-teal-500 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-teal-400;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition-colors hover:border-white hover:bg-white/10;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-md border border-navy-900 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-navy-900 hover:text-white;
+}
