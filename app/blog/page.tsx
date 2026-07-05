@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { posts } from '@/lib/posts';
+import { getAllPosts } from '@/lib/posts';
+
+const posts = getAllPosts();
 
 export const metadata = {
   title: 'Blog | TechRightly',

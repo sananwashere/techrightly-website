@@ -30,3 +30,13 @@ body {
 .btn-outline {
   @apply inline-flex items-center justify-center rounded-md border border-navy-900 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-navy-900 hover:text-white;
 }
+
+.post-content p { @apply leading-relaxed text-slate-700 mb-5; }
+.post-content h2 { @apply font-heading text-2xl font-bold text-navy-900 mt-10 mb-4; }
+.post-content h3 { @apply font-heading text-xl font-semibold text-navy-900 mt-8 mb-3; }
+.post-content ul { @apply list-disc pl-5 space-y-1 text-slate-700 mb-5; }
+.post-content ol { @apply list-decimal pl-5 space-y-1 text-slate-700 mb-5; }
+.post-content li { @apply leading-relaxed; }
+.post-content strong { @apply font-semibold text-navy-900; }
+.post-content a { @apply text-teal-600 underline underline-offset-2 hover:text-teal-700; }
+.post-content blockquote { @apply border-l-4 border-teal-400 pl-4 italic text-slate-600 my-5; }
