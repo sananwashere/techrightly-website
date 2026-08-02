@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { services } from '@/lib/services';
+import { products, advisory } from '@/lib/services';
 import { posts } from '@/lib/posts';
 import ServiceCard from '@/components/ServiceCard';
 import SectionHeading from '@/components/SectionHeading';
@@ -12,32 +12,38 @@ export default function HomePage() {
         <div className="container-page grid items-center gap-12 py-20 md:grid-cols-2 md:py-28">
           <div>
             <p className="font-heading text-sm font-semibold uppercase tracking-wider text-teal-300">
-              Fractional CTO &amp; AI Advisory
+              Independent Technical Judgment
             </p>
             <h1 className="mt-4 font-heading text-4xl font-extrabold leading-tight sm:text-5xl">
-              Senior technology leadership, without the full-time overhead.
+              You shouldn&apos;t need to be technical to know if your technology is good.
             </h1>
             <p className="mt-6 max-w-lg text-lg text-white/80">
-              TechRightly gives growing companies access to fractional CTOs, AI strategy advisors,
-              and solution architects — so the right technical decisions get made, even before you
-              need a full-time hire.
+              TechRightly gives founders, operators, and investors an honest, senior second opinion on
+              their technology — backed by 25+ years of building and scaling systems and teams. Start
+              with a fixed-price audit; keep us as your fractional CTO when you&apos;re ready.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-primary">Book a Free Consultation</Link>
-              <Link href="/services" className="btn-secondary">Explore Services</Link>
+              <Link href="/services" className="btn-primary">See Fixed-Price Audits</Link>
+              <Link href="/contact" className="btn-secondary">Book a Free Consultation</Link>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="rounded-2xl border border-white/15 bg-white/5 p-8 backdrop-blur">
-              <p className="font-heading text-sm uppercase tracking-wider text-teal-300">What we deliver</p>
-              <ul className="mt-4 space-y-3 text-white/85">
-                {services.map((s) => (
-                  <li key={s.slug} className="flex items-start gap-3">
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-400" />
-                    <span>{s.title}</span>
+              <p className="font-heading text-sm uppercase tracking-wider text-teal-300">Start here</p>
+              <ul className="mt-4 space-y-4 text-white/85">
+                {products.map((s) => (
+                  <li key={s.slug} className="flex items-start justify-between gap-4">
+                    <span className="flex items-start gap-3">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-400" />
+                      <span>{s.title}</span>
+                    </span>
+                    {s.price && <span className="shrink-0 text-sm font-semibold text-teal-300">{s.price}</span>}
                   </li>
                 ))}
               </ul>
+              <p className="mt-6 border-t border-white/15 pt-4 text-sm text-white/60">
+                Fixed scope. Fixed price. A written report you own either way.
+              </p>
             </div>
           </div>
         </div>
@@ -46,7 +52,7 @@ export default function HomePage() {
       {/* Trust strip */}
       <section className="border-b border-slate-200 bg-white">
         <div className="container-page flex flex-wrap items-center justify-between gap-6 py-8 text-sm text-slate-500">
-          <p className="font-medium text-navy-900">Built for founders, operators, and investors who need senior technical judgment fast.</p>
+          <p className="font-medium text-navy-900">Led by technology leadership with 25+ years of experience — built for people who need senior technical judgment fast.</p>
           <div className="flex flex-wrap gap-x-8 gap-y-2">
             <span>Startups &amp; scale-ups</span>
             <span>Investors &amp; acquirers</span>
@@ -58,14 +64,27 @@ export default function HomePage() {
       {/* Services */}
       <section className="container-page py-20">
         <SectionHeading
-          eyebrow="Services"
-          title="Five ways to get senior technical judgment, on your terms"
-          description="Engage the level of involvement that matches where your company is today — and change it as you grow."
+          eyebrow="Start with an audit"
+          title="Fixed-price assessments, no sales dance required"
+          description="Clear scope, clear price, and a written report you own — whether or not you ever work with us again."
         />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {products.map((service) => (
             <ServiceCard key={service.slug} service={service} />
           ))}
+        </div>
+
+        <div className="mt-16">
+          <SectionHeading
+            eyebrow="Then keep us in the room"
+            title="Ongoing advisory for when one answer isn't enough"
+            description="Most audit clients keep us on — as a fractional CTO, AI advisor, or architecture second opinion."
+          />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {advisory.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
         </div>
       </section>
 

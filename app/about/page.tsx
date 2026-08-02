@@ -49,8 +49,15 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-slate-600">
               TechRightly was built to close that gap directly: senior technology leadership and advisory, engaged
-              at the scope and cadence a growing company can actually justify — Fractional CTO, AI Strategy &amp;
-              Advisory, Solution Architecture, Digital Transformation, and Technical Due Diligence.
+              at the scope and cadence a growing company can actually justify. It&apos;s led by technology
+              leadership with more than 25 years of experience building, scaling, and rescuing systems and
+              engineering teams — the kind of judgment that usually only comes with a full-time executive salary.
+            </p>
+            <p className="mt-4 text-slate-600">
+              We deliberately start small. Most clients begin with a single fixed-price assessment — a Codebase
+              Health Check, an AI Readiness Audit, or Technical Due Diligence — because trust should be earned
+              with a deliverable, not promised in a pitch. The ongoing advisory work comes later, if and when it
+              makes sense for you.
             </p>
             <h2 className="mt-10 font-heading text-2xl font-bold text-navy-900">How we work</h2>
             <p className="mt-4 text-slate-600">
@@ -66,11 +73,17 @@ export default function AboutPage() {
               Who we work with
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
-              <li>Founders before their first full-time technical hire</li>
+              <li>Non-technical founders who need to know if their product is built well</li>
               <li>Operators modernizing legacy systems and processes</li>
               <li>Investors and acquirers needing independent technical review</li>
               <li>Boards that need a credible point of view on AI strategy</li>
             </ul>
+            <div className="mt-6 rounded-lg bg-navy-900 p-4 text-white">
+              <p className="font-heading text-2xl font-bold text-teal-400">25+</p>
+              <p className="mt-1 text-sm text-white/80">
+                years of technology leadership behind every engagement
+              </p>
+            </div>
             <Link href="/contact" className="btn-outline mt-6 w-full">Start a conversation</Link>
           </aside>
         </div>
